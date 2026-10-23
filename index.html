@@ -110,32 +110,52 @@
 
 <main id="main">
 <section class="hero" aria-labelledby="h1">
-  <div class="wrap">
-    <div>
+  <picture class="hero-bg">
+    <source media="(max-width: 700px)" srcset="img/nowra-bridge-banner-900.webp" width="900" height="948">
+    <img src="img/nowra-bridge-banner.webp" width="1920" height="914" alt="Nowra Bridge over the Shoalhaven River" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
       <h1 id="h1">Skip Bins Nowra: Skip Bin Hire Quotes Across the Shoalhaven</h1>
       <p class="lead">Cleaning out the garage, renovating the bathroom or clearing a block after a storm? Tell us your suburb, the skip size and what you're throwing out, and we'll connect you with a trusted local skip bin operator for a free, no-obligation quote.</p>
-      <div class="ctas">
-        <a class="btn btn-call" href="#quote">Get a free quote</a>
-        <a class="btn btn-ghost" href="#sizes">Skip size guide</a>
-      </div>
       <ul class="ticks">
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2c14e" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Nowra, Bomaderry, Berry, the Bay &amp; Basin and surrounds</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2c14e" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Household, green, renovation and heavy waste</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2c14e" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Free quote, no obligation to book</li>
       </ul>
+      <div class="ctas">
+        <a class="btn btn-ghost" href="#sizes">Skip size guide</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
     </div>
-    <div class="hero-side">
-    <img class="hero-img" src="img/skip-bin-hero.webp" srcset="img/skip-bin-hero-800.webp 800w, img/skip-bin-hero.webp 1400w" sizes="(min-width: 900px) 45vw, 100vw" width="1400" height="787" alt="Large yellow skip bin on a paved path beside a garden" fetchpriority="high" decoding="async">
-    <div class="hero-card">
-      <h2>How it works</h2>
-      <ol>
-        <li><strong>Tell us about the job.</strong> Fill in the quote form with your suburb, dates and the kind of rubbish.</li>
-        <li><strong>We match you with a local operator.</strong> We pass your details to a trusted skip bin company that services your part of the Shoalhaven.</li>
-        <li><strong>They confirm your price and delivery.</strong> You deal with the operator directly and only book if the quote suits you.</li>
-      </ol>
-    </div>
+    <div class="hero-form-card" id="quote">
+      <h2 id="quote-h">Get a free skip bin quote</h2>
+      <p class="form-intro">Takes a minute. We'll pass your details to a trusted local operator who services your suburb. No obligation.</p>
+    <form class="quote-form" action="https://formsubmit.co/9612dce8081255a69eed6b05b863e329" method="post">
+      <input type="hidden" name="_subject" value="New skip bin quote – nowraskipbins.com">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://nowraskipbins.com/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div><label for="name">Name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div><label for="phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div><label for="suburb">Suburb <span class="req" aria-hidden="true">*</span></label><input id="suburb" name="suburb" type="text" list="suburbs" autocomplete="address-level2" required>
+        <datalist id="suburbs"><option value="Nowra"><option value="Bomaderry"><option value="North Nowra"><option value="South Nowra"><option value="West Nowra"><option value="Worrigee"><option value="Cambewarra"><option value="Berry"><option value="Culburra Beach"><option value="Shoalhaven Heads"><option value="Huskisson"><option value="Vincentia"><option value="St Georges Basin"><option value="Sanctuary Point"><option value="Sussex Inlet"></datalist></div>
+      <div><label for="size">Skip size</label>
+        <select id="size" name="skip_size"><option value="">Not sure, help me choose</option><option>Skip bag (about 1 m³)</option><option>2 m³</option><option>3 m³</option><option>4 m³</option><option>6 m³</option><option>8 m³</option><option>10–12 m³</option></select></div>
+      <div><label for="waste">Waste type</label>
+        <select id="waste" name="waste_type"><option value="">Select one</option><option>General household</option><option>Green waste</option><option>Mixed renovation / building</option><option>Soil, concrete or bricks</option><option>Mixed, not sure</option><option>May contain asbestos</option></select></div>
+      <div><label for="date">Delivery date</label><input id="date" name="delivery_date" type="date"></div>
+      <div class="full"><label for="message">Anything else?</label><textarea id="message" name="message" rows="3" placeholder="e.g. bathroom reno, bin on the driveway, steep access, need it for 7 days"></textarea></div>
+      <input type="hidden" name="source" value="nowraskipbins.com">
+      <p class="consent full">By sending this form you agree we can share your details with one local skip bin operator so they can quote for your job.</p>
+      <div class="full"><button class="btn btn-primary" type="submit">Send my quote request</button></div>
+    </form>
+      <p class="consent">See our <a href="privacy.html">privacy policy</a>.</p>
     </div>
   </div>
+  <p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Nowra_Bridge.jpg" rel="noopener">Grahamec</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a> (cropped)</p>
 </section>
 
 <section aria-labelledby="about-h">
@@ -146,8 +166,8 @@
     <p>We're a referral and quote service for the Shoalhaven. We don't own trucks or bins. Instead, we connect you with a trusted local skip bin operator who services your suburb, so you get a real quote from people who know the area, from the hills around Cambewarra to the narrow streets of Huskisson.</p>
   </div>
   <figure class="photo">
-    <img src="img/home-cleanout.webp" width="1000" height="562" loading="lazy" decoding="async" alt="Person packing household items into cardboard boxes during a home clean-out">
-    <figcaption>Illustrative stock photo of a home clean-out.</figcaption>
+    <img src="img/renovation-rubbish-skip.webp" width="1000" height="784" loading="lazy" decoding="async" alt="Worker tossing old bricks from a roof into a skip full of renovation rubbish">
+    <figcaption>Illustrative stock photo: renovation rubbish going into a skip.</figcaption>
   </figure>
 </section>
 
@@ -226,10 +246,6 @@
       <li>Nowra</li><li>Bomaderry</li><li>North Nowra</li><li>South Nowra</li><li>West Nowra</li><li>Worrigee</li><li>Cambewarra</li><li>Berry</li><li>Terara</li><li>Greenwell Point</li><li>Culburra Beach</li><li>Shoalhaven Heads</li><li>Callala Bay</li><li>Huskisson</li><li>Vincentia</li><li>St Georges Basin</li><li>Sanctuary Point</li><li>Basin View</li><li>Erowal Bay</li><li>Sussex Inlet</li>
     </ul>
     <p class="intro">Out in Kangaroo Valley, on a rural block or further south? Ask anyway. Delivery to outlying areas may cost a little more because of travel time, and rural driveways sometimes need a smaller truck, so let us know about access when you get in touch.</p>
-    <figure class="photo local-photo">
-      <img src="img/nowra-bridge-shoalhaven-river.webp" width="1000" height="666" loading="lazy" decoding="async" alt="Nowra Bridge crossing the Shoalhaven River between Nowra and Bomaderry">
-      <figcaption>Nowra Bridge over the Shoalhaven River. Photo: <a href="https://commons.wikimedia.org/wiki/File:Nowra_Bridge.jpg" rel="noopener">Grahamec, Wikimedia Commons</a>, licensed <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a> (resized and converted to WebP).</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -262,35 +278,20 @@
   </div>
 </section>
 
-<section class="quote" id="quote" aria-labelledby="quote-h">
+<section class="quote" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <div>
-      <h2 id="quote-h">Get a free skip bin quote</h2>
-      <p>Fill in a few details and we'll pass your enquiry to a trusted local operator who services your suburb. They'll contact you to confirm the price and delivery.</p>
-      <p>It only takes a minute, and there's no obligation to book.</p>
-      <p class="note" style="color:#cfe3d8">No obligation. Your details are only used to arrange your quote. See our <a href="privacy.html" style="color:#fff">privacy policy</a>.</p>
+      <h2 id="how-h">How it works</h2>
+      <p>Fill in the quote form and we'll pass your enquiry to a trusted local operator who services your suburb. They'll contact you to confirm the price and delivery. Your details are only used to arrange your quote. See our <a href="privacy.html" style="color:#fff">privacy policy</a>.</p>
+      <p><a class="btn btn-call" href="#quote">Get a free quote</a></p>
     </div>
-    <form class="quote-form" action="https://formsubmit.co/9612dce8081255a69eed6b05b863e329" method="post">
-      <input type="hidden" name="_subject" value="New skip bin quote – nowraskipbins.com">
-      <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://nowraskipbins.com/thanks.html">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div><label for="name">Name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
-      <div><label for="phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-      <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-      <div><label for="suburb">Suburb <span class="req" aria-hidden="true">*</span></label><input id="suburb" name="suburb" type="text" list="suburbs" autocomplete="address-level2" required>
-        <datalist id="suburbs"><option value="Nowra"><option value="Bomaderry"><option value="North Nowra"><option value="South Nowra"><option value="West Nowra"><option value="Worrigee"><option value="Cambewarra"><option value="Berry"><option value="Culburra Beach"><option value="Shoalhaven Heads"><option value="Huskisson"><option value="Vincentia"><option value="St Georges Basin"><option value="Sanctuary Point"><option value="Sussex Inlet"></datalist></div>
-      <div><label for="size">Skip size</label>
-        <select id="size" name="skip_size"><option value="">Not sure, help me choose</option><option>Skip bag (about 1 m³)</option><option>2 m³</option><option>3 m³</option><option>4 m³</option><option>6 m³</option><option>8 m³</option><option>10–12 m³</option></select></div>
-      <div><label for="waste">Waste type</label>
-        <select id="waste" name="waste_type"><option value="">Select one</option><option>General household</option><option>Green waste</option><option>Mixed renovation / building</option><option>Soil, concrete or bricks</option><option>Mixed, not sure</option><option>May contain asbestos</option></select></div>
-      <div><label for="date">Delivery date</label><input id="date" name="delivery_date" type="date"></div>
-      <div class="full"><label for="message">Anything else?</label><textarea id="message" name="message" placeholder="e.g. bathroom reno, bin on the driveway, steep access, need it for 7 days"></textarea></div>
-      <input type="hidden" name="source" value="nowraskipbins.com">
-      <p class="consent full">By sending this form you agree we can share your details with one local skip bin operator so they can quote for your job.</p>
-      <div class="full"><button class="btn btn-primary" type="submit">Send my quote request</button></div>
-    </form>
+    <div class="how-card">
+      <ol>
+        <li><strong>Tell us about the job.</strong> Fill in the <a href="#quote">quote form</a> with your suburb, dates and the kind of rubbish.</li>
+        <li><strong>We match you with a local operator.</strong> We pass your details to a trusted skip bin company that services your part of the Shoalhaven.</li>
+        <li><strong>They confirm your price and delivery.</strong> You deal with the operator directly and only book if the quote suits you.</li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -313,7 +314,7 @@
     <p><strong>Nowra Skip Bins</strong> is a skip bin hire referral and quote service for Nowra and the Shoalhaven. We connect you with a trusted local operator, who provides the skip and confirms your price and booking.</p>
     <p><a href="#quote">Request a free quote</a> · <a href="privacy.html">Privacy policy</a></p>
     <p>We only use the details you send to arrange your quote. A Raf Web Studio site.</p>
-    <p class="credits">Photo credits: Nowra Bridge by <a href="https://commons.wikimedia.org/wiki/File:Nowra_Bridge.jpg" rel="noopener">Grahamec</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, resized). Other photos from <a href="https://unsplash.com/" rel="noopener">Unsplash</a> (illustrative).</p>
+    <p class="credits">Photo credits: Nowra Bridge banner by <a href="https://commons.wikimedia.org/wiki/File:Nowra_Bridge.jpg" rel="noopener">Grahamec</a>, Wikimedia Commons (<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, cropped and resized). Renovation photo by <a href="https://www.pexels.com/@christafaari/" rel="noopener">Chris Shafer</a> on Pexels (illustrative).</p>
   </div>
 </footer>
 
