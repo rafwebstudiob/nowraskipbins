@@ -127,11 +127,12 @@ figure{margin:0}
 /* banner hero */
 .hero{position:relative;overflow:hidden;background:#10231a;padding:56px 0 64px}
 .hero-bg,.hero-bg img{position:absolute;inset:0;width:100%;height:100%}
-.hero-bg img{object-fit:cover;object-position:center 40%}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,24,16,.86) 0%,rgba(8,24,16,.70) 45%,rgba(8,24,16,.45) 100%)}
+.hero-bg img{object-fit:cover;object-position:center 40%;filter:brightness(1.08)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,24,16,.58) 0%,rgba(8,24,16,.36) 45%,rgba(8,24,16,.14) 100%)}
 .hero .wrap.hero-grid{position:relative;z-index:2;display:grid;gap:32px;align-items:center}
 @media(min-width:960px){.hero .wrap.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px}.hero{padding:72px 0 80px}}
-.hero h1{text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero h1{text-shadow:0 2px 4px rgba(0,0,0,.45),0 4px 22px rgba(0,0,0,.45)}
+.hero .lead,.hero .updated{text-shadow:0 1px 3px rgba(0,0,0,.6)}
 .hero-copy .ticks{margin:6px 0 20px}
 .hero-copy .ctas{margin:0}
 .hero-form-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px;box-shadow:0 18px 40px rgba(0,0,0,.35);scroll-margin-top:80px}
@@ -145,3 +146,69 @@ figure{margin:0}
 .photo-credit a{color:#fff}
 .how-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:22px}
 .how-card ol{margin:0;padding-left:1.2em}.how-card li{margin-bottom:.5em}
+
+/* v2 */
+.hero .lead{color:#fff}
+.updated{font-size:.85rem;color:#e6f2ec;margin:14px 0 0}
+.updated-dark{font-size:.9rem;color:var(--muted);font-weight:600;margin-top:-.4em}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.step{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:600px){.step{grid-template-columns:1fr 1fr}}
+.step-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--green-2);margin-bottom:6px;padding:0}
+.step-2{margin-top:16px}
+.js .is-step-1 .step-2{display:none}
+.js .is-step-2 .step-1{display:none}
+.js .is-step-2 .step-2{margin-top:0}
+.js-only{display:none}
+.js .js-only{display:block}
+.js .step2-actions .js-only{display:inline-block}
+.other-wrap{display:none}.other-wrap.show{display:block}
+html:not(.js) .other-wrap{display:block}
+.btn-block{width:100%}
+.btn-link{background:none;border:0;color:var(--green-2);font:inherit;font-weight:600;cursor:pointer;margin-left:14px;text-decoration:underline}
+.microcopy{font-size:.86rem;color:var(--muted);margin:0}
+.form-error{color:#b02a37;font-weight:600;font-size:.9rem;margin:0}
+[aria-invalid="true"]{border-color:#b02a37}
+.hero-form-card .quote-form{display:block}
+.trust{background:#10231a;color:#e6f2ec;padding:16px 0}
+.trust-list{list-style:none;margin:0 auto;display:grid;gap:10px 24px;grid-template-columns:1fr}
+@media(min-width:700px){.trust-list{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.trust-list{grid-template-columns:repeat(4,1fr)}}
+.trust-list li{display:flex;gap:8px;align-items:flex-start;font-size:.95rem}
+.trust-list svg{flex:0 0 20px;width:20px;height:20px;color:var(--yellow);margin-top:3px}
+.trust-list strong{color:#fff}
+ol.steps{list-style:none;padding:0;margin:0 0 16px}
+.step-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--yellow);color:#1b1f23;font-weight:800;margin-bottom:8px}
+.equiv{font-weight:700;color:var(--green-2);margin:-.2em 0 .5em}
+.price-table td{white-space:nowrap}
+.area-groups{display:grid;gap:8px 28px;margin-bottom:12px}
+@media(min-width:800px){.area-groups{grid-template-columns:1fr 1fr}}
+.area-group h3{font-size:1rem;margin:10px 0 8px}
+/* photo cards */
+.photo-cards{display:grid;gap:20px;grid-template-columns:1fr;margin:10px 0 28px}
+@media(min-width:620px){.photo-cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.photo-cards{grid-template-columns:repeat(4,1fr)}}
+.photo-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s}
+.photo-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.1)}
+.pc-img{display:block;aspect-ratio:4/3;overflow:hidden;background:#f4f7f5}
+.pc-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-svg img{object-fit:contain;padding:12px}
+.pc-icon{position:absolute;left:18px;top:-26px;width:52px;height:52px;border-radius:50%;background:var(--yellow);color:#10231a;display:grid;place-items:center;border:4px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.pc-icon svg{width:24px;height:24px}
+.pc-body{position:relative;display:block;padding:34px 18px 18px}
+.pc-title{display:block;font-size:1.1rem;margin-bottom:6px}
+.pc-text{display:block;font-size:.95rem;color:var(--muted)}
+.more-jobs h3{margin-bottom:.4em}
+/* truck band */
+.band-wrap{padding:8px 0 48px}
+.truck-band{position:relative;border-radius:var(--radius);overflow:hidden;min-height:260px;display:flex;align-items:flex-end}
+.truck-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.truck-band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,24,16,.72) 0%,rgba(8,24,16,.35) 55%,rgba(8,24,16,0) 100%)}
+.band-text{position:relative;z-index:1;padding:28px;max-width:560px}
+.band-line{color:#fff;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;line-height:1.2;margin:0 0 16px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+@media(min-width:900px){.truck-band{min-height:420px;align-items:center}.band-text{padding:44px}}
+.closing-inner{display:grid;gap:12px;align-items:center}
+@media(min-width:900px){.quote .wrap.closing-inner{grid-template-columns:1fr auto}}
+.closing-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.quote .wrap.closing-grid{grid-template-columns:.9fr 1.1fr}}
+.closing-photo img{width:100%;height:auto;display:block;border-radius:var(--radius);box-shadow:0 12px 30px rgba(0,0,0,.25)}
